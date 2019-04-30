@@ -11,7 +11,7 @@
  Target Server Version : 50723
  File Encoding         : 65001
 
- Date: 30/04/2019 09:51:45
+ Date: 30/04/2019 15:44:57
 */
 
 SET NAMES utf8mb4;
@@ -530,7 +530,16 @@ CREATE TABLE `historique_note`  (
   INDEX `FK_historique_note_note`(`note`) USING BTREE,
   INDEX `FK_historique_note_modificateur`(`modificateur`) USING BTREE,
   INDEX `FK_historique_note_createur`(`createur`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of historique_note
+-- ----------------------------
+INSERT INTO `historique_note` VALUES (1, '2019-04-22 01:25:46', '2019-04-22 01:25:46', NULL, NULL, NULL, 'ACTIVE', 17, 1, 1, 1);
+INSERT INTO `historique_note` VALUES (2, '2019-04-22 01:28:03', '2019-04-22 01:28:03', NULL, NULL, NULL, 'ACTIVE', 17, 1, 1, 2);
+INSERT INTO `historique_note` VALUES (3, '2019-04-22 01:28:03', '2019-04-22 01:28:03', NULL, NULL, NULL, 'ACTIVE', 14, 1, 1, 3);
+INSERT INTO `historique_note` VALUES (4, '2019-04-22 01:28:03', '2019-04-22 01:28:03', NULL, NULL, NULL, 'ACTIVE', 8, 1, 1, 4);
+INSERT INTO `historique_note` VALUES (5, '2019-04-22 01:28:03', '2019-04-22 01:28:03', NULL, NULL, NULL, 'ACTIVE', 11, 1, 1, 5);
 
 -- ----------------------------
 -- Table structure for message
@@ -756,7 +765,15 @@ CREATE TABLE `session`  (
   INDEX `FK_Session_modificateur`(`modificateur`) USING BTREE,
   INDEX `FK_Session_utilisateur`(`utilisateur`) USING BTREE,
   INDEX `FK_Session_createur`(`createur`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of session
+-- ----------------------------
+INSERT INTO `session` VALUES (1, '2019-04-30 15:33:01', '2019-04-30 15:33:20', '2019-04-30 15:45:24', '2019-04-30 15:33:36', NULL, NULL, 'MA1', NULL, 'ACTIVE', 'ACTIVE', 1, 1, 1);
+INSERT INTO `session` VALUES (2, '2019-04-30 15:35:11', '2019-04-30 15:35:18', '2019-04-30 15:49:22', '2019-04-30 15:35:48', NULL, NULL, 'MA2', NULL, 'ACTIVE', 'ACTIVE', 1, 1, 2);
+INSERT INTO `session` VALUES (3, '2019-04-30 15:36:27', '2019-04-30 15:36:36', '2019-04-30 16:36:42', '2019-04-30 15:36:51', NULL, NULL, 'MA3', NULL, 'ACTIVE', 'ACTIVE', 1, 1, 3);
+INSERT INTO `session` VALUES (4, '2019-04-30 15:37:17', '2019-04-30 15:37:21', '2019-04-30 17:37:25', '2019-04-30 15:37:35', NULL, NULL, 'MA4', NULL, 'ACTIVE', 'ACTIVE', 1, 1, 4);
 
 -- ----------------------------
 -- Table structure for sms
