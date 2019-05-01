@@ -109,7 +109,7 @@ public class SeConnecter implements Initializable {
 
                     }
                 }else {
-                    System.out.println("Informations fausses");
+                    //System.out.println("Informations fausses");
                     FXMLLoader loader = new FXMLLoader();
                     loader.setLocation(Appli.class.getResource("view/seConnecter.fxml"));
                     AnchorPane page = loader.load();
