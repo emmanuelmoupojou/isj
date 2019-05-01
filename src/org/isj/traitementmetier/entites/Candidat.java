@@ -168,7 +168,7 @@ public class Candidat extends Personne implements Serializable {
                 ", classe=" + classe.toString() +
                 ", envoiMessages=" + envoiMessages.toString() +
                 ", estInscrits=" + estInscrits.toString() +
-                "} " + super.toString();
+                "} ";
     }
 }
 

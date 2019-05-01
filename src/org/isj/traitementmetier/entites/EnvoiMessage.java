@@ -78,18 +78,18 @@ public class EnvoiMessage extends Securite implements Serializable {
         this.candidat = candidat;
     }
 
-    /*@Override
+    @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getDateEnvoi(), getStatut(), getMessage(), getCandidat());
-    }*/
+        return Objects.hash(getDateEnvoi(), getStatut(), getMessage(), getCandidat());
+    }
 
-    /*@Override
+    @Override
     public String toString() {
         return "EnvoiMessageFacade{" +
                 "dateEnvoi=" + dateEnvoi +
                 ", statut=" + statut +
                 ", message=" + message.toString() +
                 ", candidat=" + candidat.toString() +
-                "} " + super.toString();
-    }*/
+                "}" ;
+    }
 }

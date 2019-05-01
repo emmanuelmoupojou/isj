@@ -116,7 +116,7 @@ public class Personne extends Securite {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getNom(), getPrenom(), getEmail(), getTelephone(), getDateNaissance(), getSexe(), getStatut());
+        return Objects.hash(getNom(), getPrenom(), getEmail(), getTelephone(), getDateNaissance(), getSexe(), getStatut());
     }
 
     @Override

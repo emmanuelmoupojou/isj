@@ -61,7 +61,7 @@ public class Etudiant extends Candidat implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getMatricule(), getCodeAuthentification(), getDisciplines());
+        return Objects.hash(getMatricule(), getCodeAuthentification());
     }
 
     @Override
@@ -70,6 +70,6 @@ public class Etudiant extends Candidat implements Serializable {
                 "matricule='" + matricule + '\'' +
                 ", codeAuthentification='" + codeAuthentification + '\'' +
                 ", disciplines=" + disciplines.toString() +
-                "} " + super.toString();
+                "} ";
     }
 }

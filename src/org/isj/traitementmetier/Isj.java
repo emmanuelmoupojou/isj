@@ -3,9 +3,9 @@ import org.isj.traitementmetier.entites.*;
 import org.isj.traitementmetier.facade.*;
 
 
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.Statement;
+import javax.persistence.NoResultException;
+import javax.persistence.Query;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -50,15 +50,24 @@ public class Isj {
             }
 
         }*/
-        /*
+
        //test renvoyer login en fonction du numero
-       Utilisateur u = new Isj().renvoyerLogin(696528881);
-       System.out.println(u.getNom());*/
+        /*
+        try {
+            Utilisateur u = new Isj().renvoyerLoginTelephone(691063708);
+            System.out.println(u.getNom());
+        }catch (NoResultException n){
+            System.out.println(n.getMessage());
+        }*/
 
         //test renvoyer login en fonction du mail
         /*
-        Utilisateur u = new Isj().renvoyerLoginE("mbouendenorman@gmail.com");
-        System.out.println(u.getNom());*/
+        try {
+            Utilisateur u = new Isj().renvoyerLoginEmail("ongono@gmail.com");
+            System.out.println(u.getNom());
+        }catch (NoResultException n){
+            System.out.println(n.getMessage());
+        }*/
 
         //test affichage des champs
 
@@ -68,33 +77,61 @@ public class Isj {
 
         //test authentification
         /*
-        Utilisateur u = new Isj().authentification("norman","123");
-        System.out.println(u.getNom());*/
+        try {
+            Utilisateur utilisateur = new Isj().authentification("yannick", "123456");
+            System.out.println(utilisateur.getDateCreation());
+        }catch (NoResultException n){
+            System.out.println(n.getMessage());
+        }*/
 
         //test isTelephone in BD
         /*
-        Boolean u = new Isj().isTelephoneInBD(696528887);
+        Boolean u = new Isj().isTelephoneInBD(691063708);
         System.out.println(u);*/
 
         //test isEmail in BD
         /*
-        Boolean u = new Isj().isEmailInBD("mbouendenorman@gmail.cm");
+        Boolean u = new Isj().isEmailInBD("tapigue@gmail.com");
         System.out.println(u);*/
 
-        //test sauvegarder email en bd
+        //test sauvegarder email recu en bd
 
-        /*Email email = new Email("test","test","Ceci est un test","isj@gmail.com","anthonyfouda@gmail.com","test");
-        new EmailFacade().create(email);
-        Email email = new EmailFacade().find(new Long(151));
-        Candidat candidat = new CandidatFacade().find(new Long(1));
-        String u= new Isj().sauvegarderEmailRecu(email,candidat);
-        System.out.println(u);*/
+        //Email email = new EmailFacade().find(new Long(151));
+        /*
+        try {
+            Candidat candidat = new Isj().retrouverCandidatEmail("anthonyfouda@gmai.com");
+            Email email = new Email("test","test","Ceci est u test","isj@gmail.com","anthonyfouda@gmail.com","test");
+            new EmailFacade().create(email);
+            String u = new Isj().sauvegarderEmailSucces(email, candidat);
+            System.out.println(u);
+        }catch (NoResultException n){
+            n.printStackTrace();
+        }*/
 
+
+        //test de l'enregistrement du candidat
+        /*
+        Classe classe = new ClasseFacade().find(new Long(4));
+        new CandidatFacade().enregistrer("mon candidat","le candidat","Mfomen","Elvira","mfomenndafeu@gmail.com",678451263,new Date(), Personne.Sexe.FEMININ, Personne.Statut.ACTIVE,"Mfomenita","Ndafeu",654748521,697451821,"businessman","Menagere","Ouest","Ngoa",classe);
+        */
+
+        //test sauvegarder sms
+        /*
+        try {
+            Candidat candidat = new Isj().retrouverCandidatSms(691063708);
+            SmsFacade smsFacade = new SmsFacade();
+            Sms sms = new Sms("", "", "Bon", String.valueOf(candidat.getTelephone()), "isj@gmail.com");
+            smsFacade.create(sms);
+            String result = new Isj().sauvegarderSmsEchec(sms, candidat);
+        }catch (NoResultException n){
+            n.printStackTrace();
+        }*/
         //test de la bd
 
+        /*
         EtudiantFacade etudiantFacade = new EtudiantFacade();
         List <Etudiant> etudiants = etudiantFacade.findAll();
-        System.out.println(etudiants.get(0).getNom());
+        System.out.println(etudiants.get(0).getNom());*/
 
     }
     /*public void persist(Object object) {
@@ -174,53 +211,63 @@ public class Isj {
             df.create(d25);
         }
 
-        public Utilisateur renvoyerLoginTelephone(int numero){
-            String query = "SELECT * FROM utilisateur WHERE telephone ="+numero+";";
+
+        //Fonctions gestion utilisateur
+
+        public Utilisateur renvoyerLoginTelephone(int numero) throws NoResultException{
+            String sql = "SELECT u FROM Utilisateur u WHERE u.telephone=:telephone";
             UtilisateurFacade uf=new UtilisateurFacade();
-            List <Utilisateur> utilisateurs = uf.findAllNative(query);
-            if(utilisateurs.size() != 0) {
-                return utilisateurs.get(0);
-            }else {
-                return null;
-            }
+            Query query =uf.getEntityManager().createQuery(sql);
+            query.setParameter("telephone",numero);
+            return (Utilisateur)query.getSingleResult();
         }
 
         public Boolean isTelephoneInBD(int numero){
-            Utilisateur utilisateur = renvoyerLoginTelephone(numero);
-            return utilisateur != null;
+            Utilisateur utilisateur = new Utilisateur();
+            try {
+                 utilisateur = renvoyerLoginTelephone(numero);
+                return true;
+            }catch (NoResultException n) {
+               return false;
+            }
         }
 
-        public Utilisateur renvoyerLoginEmail(String email){
-            String query = "SELECT * FROM utilisateur WHERE email like '"+email+"';";
+        public Utilisateur renvoyerLoginEmail(String email) throws NoResultException{
+            String sql = "SELECT u FROM Utilisateur u WHERE u.email=:email";
             UtilisateurFacade uf=new UtilisateurFacade();
-            List <Utilisateur> utilisateurs = uf.findAllNative(query);
-            if(utilisateurs.size() != 0) {
-                return utilisateurs.get(0);
-            }else {
-                return null;
-            }
+            Query query =uf.getEntityManager().createQuery(sql);
+            query.setParameter("email",email);
+            return (Utilisateur)query.getSingleResult();
         }
 
         public Boolean isEmailInBD(String email){
-            Utilisateur utilisateur = renvoyerLoginEmail(email);
-            return utilisateur != null;
+            Utilisateur utilisateur = new Utilisateur();
+            try {
+                utilisateur = renvoyerLoginEmail(email);
+                return true;
+            }catch (NoResultException n) {
+                return false;
+            }
         }
 
-        public Utilisateur authentification(String login, String password){
-            String query = "SELECT * FROM utilisateur WHERE login like '"+login+"';";
-            UtilisateurFacade uf = new UtilisateurFacade();
-            List <Utilisateur> utilisateurs = uf.findAllNative(query);
-            if(utilisateurs.size() != 0) {
-                if (utilisateurs.get(0).getMotDePasse().equals(password)) {
+
+        //s'assurer que l'utilisateur est actif
+        public Utilisateur authentification(String login, String password) throws NoResultException {
+            UtilisateurFacade utilisateurFacade = new UtilisateurFacade();
+            String sql = "SELECT u FROM Utilisateur u WHERE u.login=:login AND u.motDePasse=:mot_de_passe AND u.statut=:statut";
+            Query query = utilisateurFacade.getEntityManager().createQuery(sql);
+            query.setParameter("login",login);
+            query.setParameter("mot_de_passe",password);
+            query.setParameter("statut", Personne.Statut.ACTIVE);
+            return (Utilisateur)query.getSingleResult();
+            /*                //String query = "SELECT * FROM utilisateur WHERE login='" + login + "' AND mot_de_passe='" + password + "';";
+                UtilisateurFacade uf = new UtilisateurFacade();
+                List<Utilisateur> utilisateurs = uf.findAllNative(query);
+                if (utilisateurs.size() != 0) {
                     return utilisateurs.get(0);
                 } else {
-                    Utilisateur u = new Utilisateur();
-                    u.setLibelle("mot de passe incorrect");
-                    return u;
-                }
-            }else {
-                return null;
-            }
+                    return null;
+                }*/
         }
 
         public ResultSetMetaData renvoyerChamp(Class  entity){
@@ -228,108 +275,103 @@ public class Isj {
             List <String> champs = new ArrayList<>();
             String query= "SELECT * FROM " + entity.getSimpleName();
             try{
-            Statement statement = uf.getConnection().createStatement();
-            ResultSet resultSet = statement.executeQuery(query);
-            ResultSetMetaData champ = resultSet.getMetaData();
-            return champ;
+                Statement statement = uf.getConnection().createStatement();
+                ResultSet resultSet = statement.executeQuery(query);
+                ResultSetMetaData champ = resultSet.getMetaData();
+                return champ;
             }catch (Exception ex){
                 ex.printStackTrace();
             }
             return null;
         }
 
-        public String sauvegarderEmailRecu(Email email,Candidat candidat){
+
+        //fonctions Messagerie
+        public String sauvegarderEmailSucces(Email email,Candidat candidat){
             EnvoiMessage envoiMessage = new EnvoiMessage();
             Date dateEnvoi = new Date();
             EnvoiMessageFacade envoiMessageFacade = new EnvoiMessageFacade();
             EmailFacade emailFacade = new EmailFacade();
 
-            envoiMessage.setLibelle("test");
-            envoiMessage.setDescription("test");
+            envoiMessage.setLibelle("");
+            envoiMessage.setDescription("");
             envoiMessage.setDateEnvoi(dateEnvoi);
             envoiMessage.setStatut(EnvoiMessage.Statut.SUCCES);
             envoiMessage.setMessage(email);
             envoiMessage.setCandidat(candidat);
 
             envoiMessageFacade.create(envoiMessage);
-           // emailFacade.merge(email);
-
 
             return "succes";
         }
 
-        public String sauvegarderEmailEnvoieEchec(Email email){
+        public String sauvegarderEmailEchec(Email email,Candidat candidat){
+            EnvoiMessage envoiMessage = new EnvoiMessage();
             Date dateEnvoi = new Date();
-            String emailCandidat = email.getDestinataire();
-            String query = "SELECT * FROM candidat WHERE email like '"+emailCandidat+"';";
-            CandidatFacade cf = new CandidatFacade();
             EnvoiMessageFacade envoiMessageFacade = new EnvoiMessageFacade();
             EmailFacade emailFacade = new EmailFacade();
-            List <Candidat> candidats = cf.findAllNative(query);
 
-            emailFacade.create(email);
-            envoiMessageFacade.enregistrer("","",dateEnvoi, EnvoiMessage.Statut.ECHEC,email,candidats.get(0));
+            envoiMessage.setLibelle("");
+            envoiMessage.setDescription("");
+            envoiMessage.setDateEnvoi(dateEnvoi);
+            envoiMessage.setStatut(EnvoiMessage.Statut.ECHEC);
+            envoiMessage.setMessage(email);
+            envoiMessage.setCandidat(candidat);
+
+            envoiMessageFacade.create(envoiMessage);
 
             return "echec";
         }
 
-        public String sauvegarderEmailEnvoieSucces(Email email){
+        public String sauvegarderSmsSucces(Sms sms,Candidat candidat){
+            EnvoiMessage envoiMessage = new EnvoiMessage();
             Date dateEnvoi = new Date();
-            String emailCandidat = email.getDestinataire();
-            String query = "SELECT * FROM candidat WHERE email like '"+emailCandidat+"';";
-            CandidatFacade cf = new CandidatFacade();
             EnvoiMessageFacade envoiMessageFacade = new EnvoiMessageFacade();
-            EmailFacade emailFacade = new EmailFacade();
-            List <Candidat> candidats = cf.findAllNative(query);
+            SmsFacade smsFacade = new SmsFacade();
 
-            emailFacade.create(email);
-            envoiMessageFacade.enregistrer("","",dateEnvoi, EnvoiMessage.Statut.SUCCES,email,candidats.get(0));
+            envoiMessage.setLibelle("");
+            envoiMessage.setDescription("");
+            envoiMessage.setDateEnvoi(dateEnvoi);
+            envoiMessage.setStatut(EnvoiMessage.Statut.SUCCES);
+            envoiMessage.setMessage(sms);
+            envoiMessage.setCandidat(candidat);
+
+            envoiMessageFacade.create(envoiMessage);
 
             return "succes";
         }
 
-        public String sauvegarderSmsEnvoieEchec(Sms sms){
+        public String sauvegarderSmsEchec(Sms sms,Candidat candidat){
+            EnvoiMessage envoiMessage = new EnvoiMessage();
             Date dateEnvoi = new Date();
-            int telephoneCandidat = Integer.parseInt(sms.getDestinataire());
-            String query = "SELECT * FROM candidat WHERE telephone like "+telephoneCandidat+";";
-            CandidatFacade cf = new CandidatFacade();
             EnvoiMessageFacade envoiMessageFacade = new EnvoiMessageFacade();
             SmsFacade smsFacade = new SmsFacade();
-            List <Candidat> candidats = cf.findAllNative(query);
 
-            smsFacade.create(sms);
-            envoiMessageFacade.enregistrer("","",dateEnvoi, EnvoiMessage.Statut.ECHEC,sms,candidats.get(0));
+            envoiMessage.setLibelle("");
+            envoiMessage.setDescription("");
+            envoiMessage.setDateEnvoi(dateEnvoi);
+            envoiMessage.setStatut(EnvoiMessage.Statut.ECHEC);
+            envoiMessage.setMessage(sms);
+            envoiMessage.setCandidat(candidat);
+
+            envoiMessageFacade.create(envoiMessage);
 
             return "echec";
         }
 
-        public String sauvegarderSmsEnvoieSucces(Sms sms){
-            Date dateEnvoi = new Date();
-            int telephoneCandidat = Integer.parseInt(sms.getDestinataire());
-            String query = "SELECT * FROM candidat WHERE telephone like "+telephoneCandidat+";";
-            CandidatFacade cf = new CandidatFacade();
-            EnvoiMessageFacade envoiMessageFacade = new EnvoiMessageFacade();
-            SmsFacade smsFacade = new SmsFacade();
-            List <Candidat> candidats = cf.findAllNative(query);
-
-            smsFacade.create(sms);
-            envoiMessageFacade.enregistrer("","",dateEnvoi, EnvoiMessage.Statut.SUCCES,sms,candidats.get(0));
-
-            return "succes";
+        public Candidat retrouverCandidatEmail(String email) throws NoResultException{
+            String sql = "SELECT c FROM Candidat c WHERE c.email=:email";
+            CandidatFacade cf=new CandidatFacade();
+            Query query =cf.getEntityManager().createQuery(sql);
+            query.setParameter("email",email);
+            return (Candidat) query.getSingleResult();
         }
 
-        public String sauvegarderSmsRecu(Sms sms){
-            Date dateEnvoi = new Date();
-            int telephoneCandidat = Integer.parseInt(sms.getEmetteur());
-            String query = "SELECT * FROM candidat WHERE telephone like "+telephoneCandidat+";";
-            CandidatFacade cf = new CandidatFacade();
-            EnvoiMessageFacade envoiMessageFacade = new EnvoiMessageFacade();
-            SmsFacade smsFacade = new SmsFacade();
-            List <Candidat> candidats = cf.findAllNative(query);
-
-            smsFacade.create(sms);
-            envoiMessageFacade.enregistrer("","",dateEnvoi, EnvoiMessage.Statut.SUCCES,sms,candidats.get(0));
-
-            return "succes";
+        public Candidat retrouverCandidatSms(int telephone) throws NoResultException{
+            String sql = "SELECT c FROM Candidat c WHERE c.telephone=:telephone";
+            CandidatFacade cf=new CandidatFacade();
+            Query query =cf.getEntityManager().createQuery(sql);
+            query.setParameter("telephone",telephone);
+            return (Candidat) query.getSingleResult();
         }
 }

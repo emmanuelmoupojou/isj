@@ -63,7 +63,7 @@ public class Niveau extends Securite implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), numero, classes, ues);
+        return Objects.hash(getLibelle(), numero, classes, ues);
     }
 
     @Override

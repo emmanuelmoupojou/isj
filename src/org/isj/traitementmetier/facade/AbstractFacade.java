@@ -57,7 +57,7 @@ public abstract class AbstractFacade<T> {
     EntityManager em;
     EntityManagerFactory emf;
 
-    protected EntityManager getEntityManager() {
+    public EntityManager getEntityManager() {
         em = (em == null || !em.isOpen()) ? (emf == null ? Persistence.createEntityManagerFactory("ISJPU").createEntityManager() : emf.createEntityManager()) : em;
         return em;
     }
@@ -114,7 +114,7 @@ public abstract class AbstractFacade<T> {
             getEntityManager().getTransaction().rollback();
             result = "echec";
         } finally {
-//            getEntityManager().close();
+            getEntityManager().close();
         }
         return result;
     }

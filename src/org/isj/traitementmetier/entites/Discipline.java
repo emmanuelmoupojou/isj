@@ -74,7 +74,7 @@ public class Discipline extends Securite implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getEtudiant(), getSemestre(), getNbHeures(), getNbRetards());
+        return Objects.hash(getEtudiant(), getSemestre(), getNbHeures(), getNbRetards());
     }
 
     @Override
@@ -84,6 +84,6 @@ public class Discipline extends Securite implements Serializable {
                 ", semestre=" + semestre.toString() +
                 ", nbHeures=" + nbHeures +
                 ", nbRetards=" + nbRetards +
-                "} " + super.toString();
+                "} " ;
     }
 }

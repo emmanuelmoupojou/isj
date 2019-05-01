@@ -65,6 +65,10 @@ public class Securite {
         return Objects.hash(code);
     }
 
+    /*@Override
+    public int hashCode() {
+        return Objects.hash(getCode(),getDateCreation());
+    }*/
 
     public Long getCode() {
         return code;

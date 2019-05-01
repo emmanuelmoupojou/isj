@@ -56,10 +56,11 @@ public class Classe extends Securite implements Serializable {
     public String getLibelle(){
         return this.niveau.getLibelle() + "-" + this.specialite.getLibelle();
     }
-    @Override
+
+    /*@Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getCandidats(), getNiveau(), getSpecialite());
-    }
+        return Objects.hash(getCandidats(), getNiveau(), getSpecialite());
+    }*/
 
     @Override
     public String toString() {
