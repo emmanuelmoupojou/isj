@@ -151,7 +151,7 @@ public class Candidat extends Personne implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getNomDeLaMere(), getNomDuPere(), getTelephoneDeLaMere(), getTelephoneDuPere(), getProfessionDuPere(), getProfessionDelaMere(), getRegionOrigine(), getEcoleOrigine(), getClasse(), getEnvoiMessages());
+        return Objects.hash(getNomDeLaMere(), getNomDuPere(), getTelephoneDeLaMere(), getTelephoneDuPere(), getProfessionDuPere(), getProfessionDelaMere(), getRegionOrigine(), getEcoleOrigine(), getClasse());
     }
 
     @Override
@@ -166,8 +166,6 @@ public class Candidat extends Personne implements Serializable {
                 ", regionOrigine='" + regionOrigine + '\'' +
                 ", ecoleOrigine='" + ecoleOrigine + '\'' +
                 ", classe=" + classe.toString() +
-                ", envoiMessages=" + envoiMessages.toString() +
-                ", estInscrits=" + estInscrits.toString() +
                 "} ";
     }
 }

@@ -71,7 +71,7 @@ public class Utilisateur extends Personne implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getLogin(), getMotDePasse(), getRoles());
+        return Objects.hash(super.hashCode(), getLogin(), getMotDePasse());
     }
 
     @Override

@@ -72,7 +72,7 @@ public class Message extends Securite implements Serializable{
 
     @Override
     public int hashCode() {
-        return Objects.hash(getContenu(), getDestinataire(), getEmetteur(), envoiMessage);
+        return Objects.hash(getContenu(), getDestinataire(), getEmetteur());
     }
 
     @Override
