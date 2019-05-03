@@ -6,13 +6,12 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.isj.interfaces.main.view.RecuperationMotDePasse1;
-import org.isj.interfaces.main.view.SeConnecter;
-
+import javafx.stage.Window;
 import java.io.IOException;
 
 public class Appli extends Application {
 
+    public static Window getPrimaryStage;
     private Stage primaryStage;
 
     @Override
