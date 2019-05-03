@@ -110,10 +110,10 @@ public class Isj {
 
 
         //test de l'enregistrement du candidat
-        /*
+
         Classe classe = new ClasseFacade().find(new Long(4));
-        new CandidatFacade().enregistrer("mon candidat","le candidat","Mfomen","Elvira","mfomenndafeu@gmail.com",678451263,new Date(), Personne.Sexe.FEMININ, Personne.Statut.ACTIVE,"Mfomenita","Ndafeu",654748521,697451821,"businessman","Menagere","Ouest","Ngoa",classe);
-        */
+        new CandidatFacade().enregistrer("mon candidat","le candidat","Mfomen","Elvira","mfomnndafeu@gmail.com",678451263,new Date(), Personne.Sexe.FEMININ, Personne.Statut.ACTIVE,"Mfomenita","Ndafeu",654748521,697451821,"businessman","Menagere","Ouest","Ngoa",classe);
+
 
         //test sauvegarder sms
         /*

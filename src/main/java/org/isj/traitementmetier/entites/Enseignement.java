@@ -109,7 +109,7 @@ public class Enseignement extends Securite implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getHeuresDeCours(), getProgrammeDeCours(), getUe(), getEnseignants(),getTypeEvaluations());
+        return Objects.hash(super.hashCode(), getHeuresDeCours(), getProgrammeDeCours(), getUe());
     }
 
     @Override
@@ -119,8 +119,6 @@ public class Enseignement extends Securite implements Serializable {
                 ", programmeDeCours='" + programmeDeCours + '\'' +
                 ", semestre=" + semestre.toString() +
                 ", ue=" + ue.toString() +
-                ", enseignants=" + enseignants.toString() +
-                ", typeEvaluation=" + typeEvaluations.toString() +
                 "} " + super.toString();
     }
 }

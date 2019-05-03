@@ -92,7 +92,7 @@ public class Evaluation extends Securite implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getDateEval(), getStatut(), getTypeEvaluation(), getAnonymats(), getNotes());
+        return Objects.hash(super.hashCode(), getDateEval(), getStatut(), getTypeEvaluation());
     }
 
     @Override

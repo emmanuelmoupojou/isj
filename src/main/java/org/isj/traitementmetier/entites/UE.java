@@ -103,7 +103,7 @@ public class UE extends Securite implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getCodeUE(), getStatut(), getModule(), getNiveau(), getSpecialite(), getEnseignements() );
+        return Objects.hash(super.hashCode(), getCodeUE(), getStatut());
     }
 
     @Override
@@ -114,7 +114,6 @@ public class UE extends Securite implements Serializable {
                 ", module=" + module.toString() +
                 ", niveau=" + niveau.toString() +
                 ", specialite=" + specialite.toString() +
-                ", enseignements=" + enseignements.toString() +
                 "} " + super.toString();
     }
 }
