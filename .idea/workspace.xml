@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/isj/BaseDeDonnées/isj4.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intellij Projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Intellij Projects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Intellij Projects/org/isj/interfaces/main/view/listeEtudiant.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intellij Projects/org/isj/interfaces/main/view/listeEtudiant.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Intellij Projects/org/isj/interfaces/main/view/recuperationMotDePasse2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Intellij Projects/org/isj/interfaces/main/view/recuperationMotDePasse2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/isj/interfaces/main/Appli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/isj/interfaces/main/Appli.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/isj/interfaces/main/view/AjoutNouveauCandidat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/isj/interfaces/main/view/AjoutNouveauCandidat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/isj/interfaces/main/view/SeConnecter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/isj/interfaces/main/view/SeConnecter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/isj/interfaces/main/view/ajoutNouveauCandidat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/isj/interfaces/main/view/ajoutNouveauCandidat.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,8 +72,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/Appli.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            <state relative-caret-position="221">
+              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/view/SeConnecter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,22 +91,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/view/SeConnecter.java">
+        <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/view/AjoutNouveauCandidat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+            <state relative-caret-position="4250">
+              <caret line="265" column="24" selection-start-line="265" selection-start-column="24" selection-end-line="265" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/isj/gestionutilisateurs/connexion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-107">
-              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -163,13 +168,6 @@
               <item name="isj" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="isj" type="462c0819:PsiDirectoryNode" />
-              <item name="gestionutilisateurs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="isj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="isj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="isj" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -199,10 +197,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Pisj" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -221,7 +220,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Appli">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -236,6 +235,20 @@
     </configuration>
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Appli" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.isj.interfaces.main.Appli" />
+      <module name="Intellij Projects" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.isj.interfaces.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -293,6 +306,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Appli" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -310,17 +328,20 @@
       <workItem from="1556536353694" duration="200000" />
       <workItem from="1556536568392" duration="527000" />
       <workItem from="1556628467930" duration="1547000" />
+      <workItem from="1556742300107" duration="1047000" />
+      <workItem from="1556884375351" duration="17000" />
+      <workItem from="1556884438083" duration="87000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4486000" />
+    <option name="totallyTimeSpent" value="5637000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20060332" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2096531" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -381,8 +402,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/view/pageAccueil.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/images/etat.png">
       <provider selected="true" editor-type-id="images" />
@@ -401,8 +422,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/view/recuperationMotDePasse5.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/view/RecuperationMotDePasse4.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -481,16 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/Appli.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/isj/gestionutilisateurs/Eleve.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1195">
@@ -498,20 +509,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/view/SeConnecter.java">
+    <entry file="file://$PROJECT_DIR$/src/org/isj/gestionutilisateurs/connexion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+        <state relative-caret-position="17">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/isj/traitementmetier/facade/AbstractFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/Appli.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/view/AjoutNouveauCandidat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4250">
+          <caret line="265" column="24" selection-start-line="265" selection-start-column="24" selection-end-line="265" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/isj/gestionutilisateurs/connexion.java">
+    <entry file="file://$PROJECT_DIR$/src/org/isj/interfaces/main/view/SeConnecter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        <state relative-caret-position="306">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -565,6 +600,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
+          <last-edited>Intellij Projects</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

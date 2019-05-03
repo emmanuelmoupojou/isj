@@ -77,7 +77,7 @@
                                 <ComboBox fx:id="attributs" layoutX="23.0" layoutY="14.0" prefHeight="25.0" prefWidth="84.0" promptText="Attributs" />
                                 <ComboBox fx:id="operateurs" layoutX="131.0" layoutY="14.0" prefHeight="25.0" prefWidth="87.0" promptText="Opérateurs" />
                                 <TextField layoutX="242.0" layoutY="14.0" prefHeight="25.0" prefWidth="82.0" promptText="Valeurs" />
-                                <Button layoutX="344.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleAjouterCandidat" prefHeight="25.0" prefWidth="68.0" text="Ajouter" />
+                                <Button layoutX="344.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Ajouter" />
                                 <ListView layoutX="24.0" layoutY="54.0" prefHeight="133.0" prefWidth="388.0" />
                                 <Button layoutX="65.0" layoutY="201.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Filtrer" />
                                 <Button layoutX="236.0" layoutY="202.0" mnemonicParsing="false" text="Supprimer" />
@@ -116,12 +116,8 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -145,43 +141,43 @@
                             <font>
                                 <Font name="Arial" size="13.0" />
                             </font></Label>
-                        <Label text="Date de naissance" textFill="#111111" GridPane.rowIndex="4">
+                        <Label text="Date de naissance" textFill="#111111" GridPane.rowIndex="3">
                             <font>
                                 <Font name="Arial" size="13.0" />
                             </font></Label>
-                        <Label text="Nom du père" textFill="#111111" GridPane.rowIndex="9">
+                        <Label text="Nom du père" textFill="#111111" GridPane.rowIndex="5">
                             <font>
                                 <Font name="Arial" size="13.0" />
                             </font></Label>
-                        <Label text="Profession du père" textFill="#111111" GridPane.rowIndex="10">
+                        <Label text="Profession du père" textFill="#111111" GridPane.rowIndex="6">
                             <font>
                                 <Font name="Arial" size="13.0" />
                             </font></Label>
-                        <Label text="Téléphone du père" textFill="#111111" GridPane.rowIndex="11">
+                        <Label text="Téléphone du père" textFill="#111111" GridPane.rowIndex="7">
                             <font>
                                 <Font name="Arial" size="13.0" />
                             </font></Label>
-                        <Label text="Nom de la mère" textFill="#111111" GridPane.rowIndex="12">
+                        <Label text="Nom de la mère" textFill="#111111" GridPane.rowIndex="8">
                             <font>
                                 <Font name="Arial" size="13.0" />
                             </font></Label>
-                        <Label text="Profession de la mère" textFill="#111111" GridPane.rowIndex="13">
+                        <Label text="Profession de la mère" textFill="#111111" GridPane.rowIndex="9">
                             <font>
                                 <Font name="Arial" size="13.0" />
                             </font></Label>
-                        <Label text="Téléphone de la mère" textFill="#111111" GridPane.rowIndex="14">
+                        <Label text="Téléphone de la mère" textFill="#111111" GridPane.rowIndex="10">
                             <font>
                                 <Font name="Arial" size="13.0" />
                             </font></Label>
                         <TextField fx:id="nom" GridPane.columnIndex="1" />
-                        <TextField fx:id="telmere" GridPane.columnIndex="1" GridPane.rowIndex="14" />
-                        <TextField fx:id="profmere" GridPane.columnIndex="1" GridPane.rowIndex="13" />
-                        <TextField fx:id="nommere" GridPane.columnIndex="1" GridPane.rowIndex="12" />
-                        <TextField fx:id="telpere" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-                        <TextField fx:id="profpere" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-                        <TextField fx:id="nompere" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <TextField fx:id="telmere" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <TextField fx:id="profmere" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <TextField fx:id="nommere" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <TextField fx:id="telpere" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="profpere" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="nompere" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                         <TextField fx:id="prenom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <DatePicker fx:id="date" prefHeight="25.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <DatePicker fx:id="date" prefHeight="25.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                             <children>
                                 <RadioButton fx:id="masculin" mnemonicParsing="false" text="Masculin" textFill="#101010">
@@ -208,36 +204,12 @@
                                 <Insets />
                             </GridPane.margin>
                         </HBox>
-                        <Label text="Téléphone" textFill="#111111" GridPane.rowIndex="5">
+                        <Label text="Téléphone" textFill="#111111" GridPane.rowIndex="4">
                             <font>
                                 <Font name="Arial" size="13.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="telephone" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <Label text="Ecole d'origine" GridPane.rowIndex="7">
-                     <font>
-                        <Font name="Arial" size="13.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="ecoleOrigine" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                  <Label text="Email" GridPane.rowIndex="6">
-                     <font>
-                        <Font name="Arial" size="13.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                  <Label layoutX="10.0" layoutY="207.0" text="Region d'origine" GridPane.rowIndex="8">
-                     <font>
-                        <Font name="Arial" size="13.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="regionOrigine" layoutX="156.0" layoutY="202.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                  <Label layoutX="10.0" layoutY="75.0" text="Classe" textFill="#111111" GridPane.rowIndex="3">
-                     <font>
-                        <Font name="Arial" size="13.0" />
-                     </font>
-                  </Label>
-                  <ComboBox fx:id="classe" prefHeight="25.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="telephone" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                     </children>
                 </GridPane>
                 <HBox prefHeight="48.0" prefWidth="371.0">

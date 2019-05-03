@@ -5,16 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 import org.isj.interfaces.main.Appli;
 import org.isj.traitementmetier.Isj;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,10 +23,6 @@ public class SeConnecter implements Initializable {
 
     @FXML
     private TextField password;
-
-    @FXML
-    private Hyperlink oubli;
-
 
     @FXML
     private Button connexion;
@@ -98,10 +90,10 @@ public class SeConnecter implements Initializable {
                 if(utilisateurCourant != null){
                     if(utilisateurCourant.getLibelle()!="mot de passe incorrect") {
                         FXMLLoader loader = new FXMLLoader();
-                        loader.setLocation(Appli.class.getResource("view/listeEtudiant.fxml"));
+                        loader.setLocation(Appli.class.getResource("view/ajoutNouveauCandidat.fxml"));
                         BorderPane page = loader.load();
                         Stage dialogStage = new Stage();
-                        dialogStage.setTitle("Liste des étudiants");
+                        dialogStage.setTitle("Liste des candidats");
                         Scene scene = new Scene(page);
                         dialogStage.setScene(scene);
                         dialogStage.show();
