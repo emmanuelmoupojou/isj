@@ -58,7 +58,7 @@ public class Specialite extends Securite implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getUes(), getClasses(),getFiliere());
+        return Objects.hash(super.hashCode(),getFiliere());
     }
 
     @Override

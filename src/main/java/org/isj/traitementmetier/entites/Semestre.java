@@ -80,7 +80,7 @@ public class Semestre extends Securite implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getDateDebut(), getDateCloture(), getDisciplines(), getAnneeAcademique());
+        return Objects.hash(super.hashCode(), getDateDebut(), getDateCloture(), getAnneeAcademique());
     }
 
     @Override

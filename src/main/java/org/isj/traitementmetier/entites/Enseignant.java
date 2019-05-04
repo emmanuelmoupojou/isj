@@ -55,7 +55,6 @@ public class Enseignant extends Personne implements Serializable {
     public String toString() {
         return "EnseignantFacade{" +
                 "qualification='" + qualification + '\'' +
-                ", enseignements=" + enseignements.toString() +
                 "} " + super.toString();
     }
 }

@@ -26,7 +26,7 @@ public class Module extends Securite implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getUes());
+        return Objects.hash(super.hashCode());
     }
 
     @Override

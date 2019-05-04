@@ -66,7 +66,7 @@ public class TypeEvaluation extends Securite implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getPourcentage(), getEnseignement(), getEvaluations());
+        return Objects.hash(super.hashCode(), getPourcentage(), getEnseignement());
     }
 
     @Override

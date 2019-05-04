@@ -98,7 +98,7 @@ public class Note extends Securite implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getValeurNote(), getHistoriqueNotes(), getAnonymat(), getEstInscrit(), getEvaluation());
+        return Objects.hash(super.hashCode(), getValeurNote(), getAnonymat(), getEstInscrit(), getEvaluation());
     }
 
     @Override

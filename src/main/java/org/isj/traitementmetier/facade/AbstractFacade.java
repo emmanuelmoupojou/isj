@@ -18,7 +18,7 @@ import javax.persistence.Query;
 import org.isj.traitementmetier.entites.Securite;
 import org.isj.traitementmetier.entites.Utilisateur;
 
-//import static org.isj.traitementmetier.Isj.utilisateurCourant;
+import static org.isj.traitementmetier.Isj.utilisateurCourant;
 
 public abstract class AbstractFacade<T> {
 
@@ -62,7 +62,7 @@ public abstract class AbstractFacade<T> {
         return em;
     }
 
-    Utilisateur utilisateurCourant = getEntityManager().find(Utilisateur.class, new Long(1));
+    //Utilisateur utilisateurCourant = getEntityManager().find(Utilisateur.class, new Long(1));
 
 
     public String create(T entity) {

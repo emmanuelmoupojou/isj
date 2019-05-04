@@ -22,6 +22,8 @@ public class Sms extends Message implements Serializable {
     public Sms() {
     }
 
+
+
     @Override
     public String getLibelle(){
         return super.getLibelle();
