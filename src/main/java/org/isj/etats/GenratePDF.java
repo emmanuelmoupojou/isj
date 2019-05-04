@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.isj.etat;
+package org.isj.etats;
 
 import com.mysql.jdbc.Driver;
 import java.sql.Connection;

@@ -27,6 +27,7 @@
       <change afterPath="$PROJECT_DIR$/lib/smslib-3.5.0.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/swing-layout-1.0.3.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intellij Projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Intellij Projects.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -116,7 +117,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/isj/messagerie/sms1/CommTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+              <caret column="11" selection-start-column="11" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -300,7 +301,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556877559598" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556877950809" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -418,12 +419,12 @@
       <workItem from="1556536353694" duration="200000" />
       <workItem from="1556536568392" duration="527000" />
       <workItem from="1556628467930" duration="1547000" />
-      <workItem from="1556794962841" duration="7252000" />
+      <workItem from="1556794962841" duration="7623000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11738000" />
+    <option name="totallyTimeSpent" value="12109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -699,7 +700,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/isj/messagerie/sms1/CommTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
